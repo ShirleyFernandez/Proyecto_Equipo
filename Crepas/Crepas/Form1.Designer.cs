@@ -39,6 +39,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.combo_tipo = new System.Windows.Forms.ComboBox();
             this.Pedidos = new System.Windows.Forms.ListBox();
+            this.Direccion = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.l_total = new System.Windows.Forms.Label();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_agregar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +93,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 179);
+            this.textBox1.Location = new System.Drawing.Point(12, 156);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 3;
@@ -94,7 +102,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 139);
+            this.label2.Location = new System.Drawing.Point(55, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 22);
             this.label2.TabIndex = 4;
@@ -104,7 +112,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 239);
+            this.label3.Location = new System.Drawing.Point(197, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 22);
             this.label3.TabIndex = 5;
@@ -116,24 +124,110 @@
             this.combo_tipo.Items.AddRange(new object[] {
             "Local",
             "Domicilio"});
-            this.combo_tipo.Location = new System.Drawing.Point(13, 277);
+            this.combo_tipo.Location = new System.Drawing.Point(187, 156);
             this.combo_tipo.Name = "combo_tipo";
             this.combo_tipo.Size = new System.Drawing.Size(121, 21);
             this.combo_tipo.TabIndex = 6;
             // 
             // Pedidos
             // 
+            this.Pedidos.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pedidos.FormattingEnabled = true;
-            this.Pedidos.Location = new System.Drawing.Point(424, 45);
+            this.Pedidos.ItemHeight = 22;
+            this.Pedidos.Location = new System.Drawing.Point(449, 45);
             this.Pedidos.Name = "Pedidos";
-            this.Pedidos.Size = new System.Drawing.Size(329, 316);
+            this.Pedidos.ScrollAlwaysVisible = true;
+            this.Pedidos.Size = new System.Drawing.Size(329, 290);
             this.Pedidos.TabIndex = 7;
+            // 
+            // Direccion
+            // 
+            this.Direccion.AutoSize = true;
+            this.Direccion.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Direccion.Location = new System.Drawing.Point(120, 203);
+            this.Direccion.Name = "Direccion";
+            this.Direccion.Size = new System.Drawing.Size(76, 22);
+            this.Direccion.TabIndex = 8;
+            this.Direccion.Text = "Dirección";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(12, 244);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(366, 20);
+            this.textBox2.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 301);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 22);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Total: ";
+            // 
+            // l_total
+            // 
+            this.l_total.AutoSize = true;
+            this.l_total.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_total.Location = new System.Drawing.Point(83, 301);
+            this.l_total.Name = "l_total";
+            this.l_total.Size = new System.Drawing.Size(0, 22);
+            this.l_total.TabIndex = 11;
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.Location = new System.Drawing.Point(221, 302);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardar.TabIndex = 12;
+            this.btn_guardar.Text = "Aceptar";
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(202, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 22);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Cantidad";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Local",
+            "Domicilio"});
+            this.comboBox1.Location = new System.Drawing.Point(201, 79);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(73, 21);
+            this.comboBox1.TabIndex = 14;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Location = new System.Drawing.Point(333, 79);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(75, 23);
+            this.btn_agregar.TabIndex = 15;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.UseVisualStyleBackColor = true;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 356);
+            this.Controls.Add(this.btn_agregar);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btn_guardar);
+            this.Controls.Add(this.l_total);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Direccion);
             this.Controls.Add(this.Pedidos);
             this.Controls.Add(this.combo_tipo);
             this.Controls.Add(this.label3);
@@ -166,6 +260,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox combo_tipo;
         private System.Windows.Forms.ListBox Pedidos;
+        private System.Windows.Forms.Label Direccion;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label l_total;
+        private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btn_agregar;
     }
 }
 
