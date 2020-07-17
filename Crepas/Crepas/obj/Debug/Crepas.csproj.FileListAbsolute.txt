@@ -1,0 +1,10 @@
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Crepas.exe.config
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Crepas.exe
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Crepas.pdb
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.csprojAssemblyReference.cache
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.Inicio.resources
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.Properties.Resources.resources
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.csproj.GenerateResource.cache
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.csproj.CoreCompileInputs.cache
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.exe
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.pdb
