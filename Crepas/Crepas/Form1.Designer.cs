@@ -225,9 +225,14 @@
             // 
             // txt_cant
             // 
+<<<<<<< HEAD
             this.txt_cant.Location = new System.Drawing.Point(307, 189);
             this.txt_cant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_cant.MaxLength = 2;
+=======
+            this.txt_cant.Location = new System.Drawing.Point(230, 79);
+            this.txt_cant.MaxLength = 100;
+>>>>>>> parent of 1957019... Fondo
             this.txt_cant.Name = "txt_cant";
             this.txt_cant.Size = new System.Drawing.Size(77, 22);
             this.txt_cant.TabIndex = 16;
