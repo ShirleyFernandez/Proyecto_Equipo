@@ -288,16 +288,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 356);
-=======
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1067, 424);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6);
->>>>>>> 13bba9415c7476845e573b57cd7b12465defc010
+            this.Controls.Add(this.label6); 
             this.Controls.Add(this.btn_borrar);
             this.Controls.Add(this.Lista_Productos);
             this.Controls.Add(this.txt_cant);
