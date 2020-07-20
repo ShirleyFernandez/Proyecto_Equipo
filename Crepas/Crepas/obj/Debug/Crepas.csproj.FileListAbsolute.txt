@@ -8,6 +8,7 @@ C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepa
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.csproj.CoreCompileInputs.cache
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.exe
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.pdb
+<<<<<<< HEAD
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Google.Protobuf.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\K4os.Compression.LZ4.dll
@@ -66,3 +67,5 @@ C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipo\Crepas\Crepas\obj\De
 C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.csproj.CopyComplete
 C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.exe
 C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.pdb
+=======
+>>>>>>> parent of db0e283... Validación y avance de conexion con la bd
