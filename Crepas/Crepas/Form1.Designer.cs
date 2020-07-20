@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,109 +41,84 @@
             this.combo_tipo = new System.Windows.Forms.ComboBox();
             this.Pedidos = new System.Windows.Forms.ListBox();
             this.Direccion = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_dic = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.l_total = new System.Windows.Forms.Label();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_agregar = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.txt_cant = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-<<<<<<< HEAD
-            this.Lista_Productos = new System.Windows.Forms.CheckedListBox();
-            this.btn_borrar = new System.Windows.Forms.Button();
-            this.cocinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-=======
->>>>>>> parent of 8cfac05... cambio a list_box
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-=======
-            this.menuStrip1.SuspendLayout();
->>>>>>> parent of db0e283... Validación y avance de conexion con la bd
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inicioToolStripMenuItem,
-            this.pedidosToolStripMenuItem,
-            this.cocinaToolStripMenuItem});
+            this.pedidosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.inicioToolStripMenuItem.Text = "Incio";
             // 
             // pedidosToolStripMenuItem
             // 
             this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.pedidosToolStripMenuItem.Text = "Cuentas";
             // 
             // combo_productos
             // 
             this.combo_productos.FormattingEnabled = true;
-            this.combo_productos.Location = new System.Drawing.Point(13, 187);
-            this.combo_productos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combo_productos.Location = new System.Drawing.Point(12, 79);
             this.combo_productos.Name = "combo_productos";
-<<<<<<< HEAD
-            this.combo_productos.Size = new System.Drawing.Size(223, 24);
-=======
-            this.combo_productos.Size = new System.Drawing.Size(121, 21);
->>>>>>> parent of db0e283... Validación y avance de conexion con la bd
+            this.combo_productos.Size = new System.Drawing.Size(168, 21);
             this.combo_productos.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Allure Of The Sun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(84, 157);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(40, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.Size = new System.Drawing.Size(73, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Producto";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(42, 251);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(12, 156);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 22);
+            this.textBox1.Size = new System.Drawing.Size(120, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Allure Of The Sun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(94, 227);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(55, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.Size = new System.Drawing.Size(58, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "Cliente";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Allure Of The Sun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(286, 227);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(197, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 20);
+            this.label3.Size = new System.Drawing.Size(111, 22);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tipo de pedido";
             // 
@@ -152,11 +128,11 @@
             this.combo_tipo.Items.AddRange(new object[] {
             "Local",
             "Domicilio"});
-            this.combo_tipo.Location = new System.Drawing.Point(269, 251);
-            this.combo_tipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combo_tipo.Location = new System.Drawing.Point(187, 156);
             this.combo_tipo.Name = "combo_tipo";
-            this.combo_tipo.Size = new System.Drawing.Size(160, 24);
+            this.combo_tipo.Size = new System.Drawing.Size(121, 21);
             this.combo_tipo.TabIndex = 6;
+            this.combo_tipo.SelectionChangeCommitted += new System.EventHandler(this.combo_tipo_SelectionChangeCommitted);
             // 
             // Pedidos
             // 
@@ -172,42 +148,27 @@
             // Direccion
             // 
             this.Direccion.AutoSize = true;
-<<<<<<< HEAD
-            this.Direccion.Font = new System.Drawing.Font("Allure Of The Sun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Direccion.Location = new System.Drawing.Point(187, 290);
-            this.Direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-=======
             this.Direccion.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Direccion.Location = new System.Drawing.Point(120, 203);
->>>>>>> parent of db0e283... Validación y avance de conexion con la bd
+            this.Direccion.Location = new System.Drawing.Point(140, 207);
             this.Direccion.Name = "Direccion";
-            this.Direccion.Size = new System.Drawing.Size(89, 20);
+            this.Direccion.Size = new System.Drawing.Size(76, 22);
             this.Direccion.TabIndex = 8;
             this.Direccion.Text = "Dirección";
             // 
-            // textBox2
+            // txt_dic
             // 
-<<<<<<< HEAD
-            this.txt_dic.Location = new System.Drawing.Point(13, 314);
-            this.txt_dic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_dic.Location = new System.Drawing.Point(12, 244);
             this.txt_dic.Name = "txt_dic";
-            this.txt_dic.Size = new System.Drawing.Size(487, 22);
+            this.txt_dic.Size = new System.Drawing.Size(366, 20);
             this.txt_dic.TabIndex = 9;
-=======
-            this.textBox2.Location = new System.Drawing.Point(12, 244);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(366, 20);
-            this.textBox2.TabIndex = 9;
->>>>>>> parent of db0e283... Validación y avance de conexion con la bd
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Allure Of The Sun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 370);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 301);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.Size = new System.Drawing.Size(55, 22);
             this.label4.TabIndex = 10;
             this.label4.Text = "Total: ";
             // 
@@ -215,74 +176,46 @@
             // 
             this.l_total.AutoSize = true;
             this.l_total.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_total.Location = new System.Drawing.Point(111, 370);
-            this.l_total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.l_total.Location = new System.Drawing.Point(83, 301);
             this.l_total.Name = "l_total";
-            this.l_total.Size = new System.Drawing.Size(0, 27);
+            this.l_total.Size = new System.Drawing.Size(0, 22);
             this.l_total.TabIndex = 11;
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Font = new System.Drawing.Font("Allure Of The Sun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar.Location = new System.Drawing.Point(315, 362);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_guardar.Location = new System.Drawing.Point(221, 302);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(100, 28);
+            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
             this.btn_guardar.TabIndex = 12;
             this.btn_guardar.Text = "Aceptar";
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-<<<<<<< HEAD
-            this.label5.Font = new System.Drawing.Font("Allure Of The Sun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(303, 157);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-=======
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(202, 45);
->>>>>>> parent of db0e283... Validación y avance de conexion con la bd
+            this.label5.Location = new System.Drawing.Point(224, 45);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 20);
+            this.label5.Size = new System.Drawing.Size(72, 22);
             this.label5.TabIndex = 13;
             this.label5.Text = "Cantidad";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Local",
-            "Domicilio"});
-            this.comboBox1.Location = new System.Drawing.Point(201, 79);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(73, 21);
-            this.comboBox1.TabIndex = 14;
-            // 
             // btn_agregar
             // 
-            this.btn_agregar.Font = new System.Drawing.Font("Allure Of The Sun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.Location = new System.Drawing.Point(472, 187);
-            this.btn_agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_agregar.Location = new System.Drawing.Point(333, 79);
             this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(100, 28);
+            this.btn_agregar.Size = new System.Drawing.Size(75, 23);
             this.btn_agregar.TabIndex = 15;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD
             // txt_cant
             // 
-<<<<<<< HEAD
-            this.txt_cant.Location = new System.Drawing.Point(307, 189);
-            this.txt_cant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_cant.MaxLength = 2;
-=======
             this.txt_cant.Location = new System.Drawing.Point(230, 79);
             this.txt_cant.MaxLength = 100;
->>>>>>> parent of 1957019... Fondo
             this.txt_cant.Name = "txt_cant";
-            this.txt_cant.Size = new System.Drawing.Size(77, 22);
+            this.txt_cant.Size = new System.Drawing.Size(59, 20);
             this.txt_cant.TabIndex = 16;
             this.txt_cant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cant_KeyPress);
             // 
@@ -290,85 +223,18 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-<<<<<<< HEAD
-            // Lista_Productos
-            // 
-            this.Lista_Productos.FormattingEnabled = true;
-            this.Lista_Productos.Location = new System.Drawing.Point(605, 37);
-            this.Lista_Productos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Lista_Productos.Name = "Lista_Productos";
-            this.Lista_Productos.Size = new System.Drawing.Size(440, 310);
-            this.Lista_Productos.TabIndex = 17;
-            // 
-            // btn_borrar
-            // 
-            this.btn_borrar.Font = new System.Drawing.Font("Allure Of The Sun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_borrar.Location = new System.Drawing.Point(947, 372);
-            this.btn_borrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.Size = new System.Drawing.Size(100, 28);
-            this.btn_borrar.TabIndex = 18;
-            this.btn_borrar.Text = "Borrar";
-            this.btn_borrar.UseVisualStyleBackColor = true;
-            // 
-            // cocinaToolStripMenuItem
-            // 
-            this.cocinaToolStripMenuItem.Name = "cocinaToolStripMenuItem";
-            this.cocinaToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
-            this.cocinaToolStripMenuItem.Text = "Cocina";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("CHICKEN Pie Height", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(157, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(336, 32);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Hola, generemos el pedido";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(42, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 99);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
-=======
->>>>>>> parent of 8cfac05... cambio a list_box
-=======
->>>>>>> parent of db0e283... Validación y avance de conexion con la bd
             // Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 356);
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1067, 424);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6); 
-            this.Controls.Add(this.btn_borrar);
-            this.Controls.Add(this.Lista_Productos);
-=======
->>>>>>> parent of 8cfac05... cambio a list_box
             this.Controls.Add(this.txt_cant);
-=======
->>>>>>> parent of db0e283... Validación y avance de conexion con la bd
             this.Controls.Add(this.btn_agregar);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.l_total);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_dic);
             this.Controls.Add(this.Direccion);
             this.Controls.Add(this.Pedidos);
             this.Controls.Add(this.combo_tipo);
@@ -380,17 +246,12 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Inicio";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-=======
->>>>>>> parent of db0e283... Validación y avance de conexion con la bd
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,26 +270,14 @@
         private System.Windows.Forms.ComboBox combo_tipo;
         private System.Windows.Forms.ListBox Pedidos;
         private System.Windows.Forms.Label Direccion;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_dic;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label l_total;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_agregar;
-<<<<<<< HEAD
         private System.Windows.Forms.TextBox txt_cant;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-<<<<<<< HEAD
-        private System.Windows.Forms.Button btn_borrar;
-        private System.Windows.Forms.CheckedListBox Lista_Productos;
-        private System.Windows.Forms.ToolStripMenuItem cocinaToolStripMenuItem;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
-=======
->>>>>>> parent of 8cfac05... cambio a list_box
-=======
->>>>>>> parent of db0e283... Validación y avance de conexion con la bd
     }
 }
 
