@@ -204,7 +204,7 @@
             // txt_cant
             // 
             this.txt_cant.Location = new System.Drawing.Point(230, 79);
-            this.txt_cant.MaxLength = 100;
+            this.txt_cant.MaxLength = 2;
             this.txt_cant.Name = "txt_cant";
             this.txt_cant.Size = new System.Drawing.Size(59, 20);
             this.txt_cant.TabIndex = 16;
