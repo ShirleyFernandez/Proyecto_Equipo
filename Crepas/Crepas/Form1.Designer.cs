@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.combo_tipo = new System.Windows.Forms.ComboBox();
+            this.Pedidos = new System.Windows.Forms.ListBox();
             this.Direccion = new System.Windows.Forms.Label();
             this.txt_dic = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,11 +49,14 @@
             this.btn_agregar = new System.Windows.Forms.Button();
             this.txt_cant = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+<<<<<<< HEAD
             this.Lista_Productos = new System.Windows.Forms.CheckedListBox();
             this.btn_borrar = new System.Windows.Forms.Button();
             this.cocinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+=======
+>>>>>>> parent of 8cfac05... cambio a list_box
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -148,6 +152,17 @@
             this.combo_tipo.TabIndex = 6;
             this.combo_tipo.SelectionChangeCommitted += new System.EventHandler(this.combo_tipo_SelectionChangeCommitted);
             // 
+            // Pedidos
+            // 
+            this.Pedidos.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pedidos.FormattingEnabled = true;
+            this.Pedidos.ItemHeight = 22;
+            this.Pedidos.Location = new System.Drawing.Point(449, 45);
+            this.Pedidos.Name = "Pedidos";
+            this.Pedidos.ScrollAlwaysVisible = true;
+            this.Pedidos.Size = new System.Drawing.Size(329, 290);
+            this.Pedidos.TabIndex = 7;
+            // 
             // Direccion
             // 
             this.Direccion.AutoSize = true;
@@ -221,7 +236,6 @@
             this.btn_agregar.TabIndex = 15;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // txt_cant
             // 
@@ -242,6 +256,7 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+<<<<<<< HEAD
             // Lista_Productos
             // 
             this.Lista_Productos.FormattingEnabled = true;
@@ -289,12 +304,15 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+=======
+>>>>>>> parent of 8cfac05... cambio a list_box
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 356);
+<<<<<<< HEAD
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1067, 424);
@@ -302,6 +320,8 @@
             this.Controls.Add(this.label6); 
             this.Controls.Add(this.btn_borrar);
             this.Controls.Add(this.Lista_Productos);
+=======
+>>>>>>> parent of 8cfac05... cambio a list_box
             this.Controls.Add(this.txt_cant);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.label5);
@@ -310,6 +330,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_dic);
             this.Controls.Add(this.Direccion);
+            this.Controls.Add(this.Pedidos);
             this.Controls.Add(this.combo_tipo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -343,6 +364,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox combo_tipo;
+        private System.Windows.Forms.ListBox Pedidos;
         private System.Windows.Forms.Label Direccion;
         private System.Windows.Forms.TextBox txt_dic;
         private System.Windows.Forms.Label label4;
@@ -352,11 +374,14 @@
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.TextBox txt_cant;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+<<<<<<< HEAD
         private System.Windows.Forms.Button btn_borrar;
         private System.Windows.Forms.CheckedListBox Lista_Productos;
         private System.Windows.Forms.ToolStripMenuItem cocinaToolStripMenuItem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+=======
+>>>>>>> parent of 8cfac05... cambio a list_box
     }
 }
 

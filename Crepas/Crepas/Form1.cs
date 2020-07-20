@@ -81,6 +81,7 @@ namespace Crepas
                 txt_dic.ReadOnly = false;
             }
         }
+<<<<<<< HEAD
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
@@ -96,5 +97,7 @@ namespace Crepas
         {
 
         }
+=======
+>>>>>>> parent of 8cfac05... cambio a list_box
     }  
 }
