@@ -32,3 +32,39 @@ C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Syste
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\obj\Debug\Crepas.csproj.CopyComplete
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\Crepas.exe.config
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\Crepas.exe
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\Crepas.pdb
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\Google.Protobuf.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\MySql.Data.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\Renci.SshNet.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\System.Buffers.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\System.Memory.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\Zstandard.Net.dll
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\Google.Protobuf.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\MySql.Data.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\Renci.SshNet.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\System.Buffers.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\System.Memory.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.csprojAssemblyReference.cache
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.Inicio.resources
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.Properties.Resources.resources
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.csproj.GenerateResource.cache
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.csproj.CoreCompileInputs.cache
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.csproj.CopyComplete
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.exe
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.pdb
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.Form2.resources
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.Form3.resources

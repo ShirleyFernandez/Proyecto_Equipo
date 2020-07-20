@@ -81,5 +81,15 @@ namespace Crepas
                 txt_dic.ReadOnly = false;
             }
         }
+
+        private void Pedidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }  
 }
