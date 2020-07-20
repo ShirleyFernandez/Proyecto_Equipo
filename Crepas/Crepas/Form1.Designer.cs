@@ -39,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.combo_tipo = new System.Windows.Forms.ComboBox();
-            this.Pedidos = new System.Windows.Forms.ListBox();
             this.Direccion = new System.Windows.Forms.Label();
             this.txt_dic = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,6 +48,8 @@
             this.btn_agregar = new System.Windows.Forms.Button();
             this.txt_cant = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Lista_Productos = new System.Windows.Forms.CheckedListBox();
+            this.btn_borrar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -134,17 +135,6 @@
             this.combo_tipo.TabIndex = 6;
             this.combo_tipo.SelectionChangeCommitted += new System.EventHandler(this.combo_tipo_SelectionChangeCommitted);
             // 
-            // Pedidos
-            // 
-            this.Pedidos.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pedidos.FormattingEnabled = true;
-            this.Pedidos.ItemHeight = 22;
-            this.Pedidos.Location = new System.Drawing.Point(449, 45);
-            this.Pedidos.Name = "Pedidos";
-            this.Pedidos.ScrollAlwaysVisible = true;
-            this.Pedidos.Size = new System.Drawing.Size(329, 290);
-            this.Pedidos.TabIndex = 7;
-            // 
             // Direccion
             // 
             this.Direccion.AutoSize = true;
@@ -209,6 +199,7 @@
             this.btn_agregar.TabIndex = 15;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // txt_cant
             // 
@@ -223,11 +214,30 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // Lista_Productos
+            // 
+            this.Lista_Productos.FormattingEnabled = true;
+            this.Lista_Productos.Location = new System.Drawing.Point(454, 30);
+            this.Lista_Productos.Name = "Lista_Productos";
+            this.Lista_Productos.Size = new System.Drawing.Size(331, 259);
+            this.Lista_Productos.TabIndex = 17;
+            // 
+            // btn_borrar
+            // 
+            this.btn_borrar.Location = new System.Drawing.Point(710, 302);
+            this.btn_borrar.Name = "btn_borrar";
+            this.btn_borrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_borrar.TabIndex = 18;
+            this.btn_borrar.Text = "Borrar";
+            this.btn_borrar.UseVisualStyleBackColor = true;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 356);
+            this.Controls.Add(this.btn_borrar);
+            this.Controls.Add(this.Lista_Productos);
             this.Controls.Add(this.txt_cant);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.label5);
@@ -236,7 +246,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_dic);
             this.Controls.Add(this.Direccion);
-            this.Controls.Add(this.Pedidos);
             this.Controls.Add(this.combo_tipo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -268,7 +277,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox combo_tipo;
-        private System.Windows.Forms.ListBox Pedidos;
         private System.Windows.Forms.Label Direccion;
         private System.Windows.Forms.TextBox txt_dic;
         private System.Windows.Forms.Label label4;
@@ -278,6 +286,8 @@
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.TextBox txt_cant;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btn_borrar;
+        private System.Windows.Forms.CheckedListBox Lista_Productos;
     }
 }
 

@@ -81,5 +81,10 @@ namespace Crepas
                 txt_dic.ReadOnly = false;
             }
         }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }  
 }
