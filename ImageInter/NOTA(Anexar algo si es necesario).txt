@@ -1,0 +1,2 @@
+Holi, en esta carpeta estan guardados algunos elementos que utilizamos para el FRONT de la aplicacion, como imagnes y FUENTES que aplicamos 
+en las ventanas para que se vieran bien :) Si necesitas agregar un recurso imagen o fuente, aguegalo aqui :D
