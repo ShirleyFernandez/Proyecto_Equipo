@@ -83,3 +83,5 @@ ALTER TABLE Pedidos ADD constraint fk_idProductos FOREIGN KEY (idProductos) REFE
 INSERT INTO Pedidos(idLista, fecha, TipoPedido, idProductos, Cliente, direccion) VALUES(1,'2020-07-20',"Local", 2, "Juan", "");
 
 select * from Pedidos;
+SELECT Pedidos.idLista, Productos.NombreP FROM Pedidos, Productos WHERE idLista=1 AND Pedidos.idProductos = Productos.idProductos;
+DELETE FROM Pedidos WHERE idPedidos=2;
