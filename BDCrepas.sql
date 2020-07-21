@@ -76,12 +76,14 @@ CREATE TABLE IF NOT EXISTS Pedidos (
   TipoPedido VARCHAR(9) NOT NULL,
   idProductos INT NOT NULL,
   Cliente varchar(20) NOT NULL,
-  direccion varchar(50));
+  direccion varchar(50),
+  estado varchar(20),
+  cant int not null);
 ALTER TABLE Pedidos ADD constraint pk_id_Pedidos_Lista_Productos primary key (idPedidos, idLista, idProductos);
 ALTER TABLE Pedidos ADD constraint fk_idProductos FOREIGN KEY (idProductos) REFERENCES Productos (idProductos);
 
-INSERT INTO Pedidos(idLista, fecha, TipoPedido, idProductos, Cliente, direccion) VALUES(1,'2020-07-20',"Local", 2, "Juan", "");
+INSERT INTO Pedidos(idLista, fecha, TipoPedido, idProductos, Cliente, direccion, estado) VALUES(1,'2020-07-20',"Local", 2, "Juan", "", "Preparacion",2);
 
 select * from Pedidos;
 SELECT Pedidos.idLista, Productos.NombreP FROM Pedidos, Productos WHERE idLista=1 AND Pedidos.idProductos = Productos.idProductos;
-DELETE FROM Pedidos WHERE idPedidos=2;
+DELETE FROM Pedidos WHERE idPedidos=1;
