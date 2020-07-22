@@ -13,19 +13,15 @@ C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Googl
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\K4os.Compression.LZ4.Streams.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\MySql.Data.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Renci.SshNet.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\System.Buffers.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\System.Memory.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Ubiety.Dns.Core.dll
-C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Zstandard.Net.dll
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Google.Protobuf.xml
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\K4os.Compression.LZ4.xml
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\K4os.Compression.LZ4.Streams.xml
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\K4os.Hash.xxHash.xml
-C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\MySql.Data.xml
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\Renci.SshNet.xml
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\System.Buffers.xml
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_Equipo\Crepas\Crepas\bin\Debug\System.Memory.xml
@@ -68,3 +64,17 @@ C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\D
 C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.pdb
 C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.Form2.resources
 C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.Form3.resources
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\obj\Debug\Crepas.Form2.resources
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\obj\Debug\Crepas.Form3.resources
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\RestSharp.dll
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\System.Text.Json.dll
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\System.ValueTuple.dll
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\RestSharp.xml
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\System.Text.Json.xml
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\System.ValueTuple.xml

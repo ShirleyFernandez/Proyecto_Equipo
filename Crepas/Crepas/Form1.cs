@@ -7,16 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Crypto.Tls;
+using RestSharp;
 
 namespace Crepas
 {
         //EL NOMBRE DEL FORM ES EL PRIMERO QUE SALE EN ESTE CASO "INICIO"
     public partial class Inicio : Form
     {
-        MySqlConnection conexion = new MySqlConnection();
-        String Cadenaconexion;
+        int contList = 0;
+     
+        
         public Inicio()
         {
             InitializeComponent();
@@ -24,42 +25,15 @@ namespace Crepas
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            Cadenaconexion = "Server = 192.168.99.100; User id=root; Database=crepas; Password=123456789";
-            conexion.ConnectionString = Cadenaconexion;
-            MySqlCommand comandobus = new MySqlCommand("select Nombre from Productos ;");
-            comandobus.Connection = conexion;
-            conexion.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter(comandobus);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            combo_productos.DisplayMember = "Nombre";
-            combo_productos.DataSource = dt;
-            conexion.Close();
+
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            Cadenaconexion = "Server = 192.168.99.100; User id=root; Database=crepas; Password=123456789";
-            conexion.ConnectionString = Cadenaconexion;
-            MySqlCommand comandobus = new MySqlCommand("select Nombre from Productos ;");
-            comandobus.Connection = conexion;
-            conexion.Open();
-            MySqlDataReader myreader = comandobus.ExecuteReader();
-            try
-            {
-                if (myreader.HasRows)
-                {
-                    while (myreader.Read())
-                    {
-
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Se ha producido un error" + ex + "");
-            }
-            conexion.Close();
+            contList++;
+            txt_cant.Clear();
+            txt_cliente.Clear();
+            txt_dic.Clear();
         }
 
         private void txt_cant_KeyPress(object sender, KeyPressEventArgs e)
@@ -134,6 +108,28 @@ namespace Crepas
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.ExitThread();
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idLista, idProductos;
+                idLista = contList;
+                idProductos = Convert.ToInt32(combo_productos.Text);
+                string fecha, TipoPedido, Cliente, direccion = " ", estado;
+                fecha = DateTime.Today.ToString("yyyy-MM-dd");
+                TipoPedido = combo_tipo.Text;
+                Cliente = txt_cliente.Text;
+                direccion = txt_dic.Text;
+                estado = "En proceso";
+
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error");
+            }
         }
     }  
 }
