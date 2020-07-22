@@ -8,9 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crypto.Tls;
 
 namespace Crepas
 {
+        //EL NOMBRE DEL FORM ES EL PRIMERO QUE SALE EN ESTE CASO "INICIO"
     public partial class Inicio : Form
     {
         MySqlConnection conexion = new MySqlConnection();
@@ -97,19 +99,41 @@ namespace Crepas
 
         }
 
-        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+        //ELEMENTOS DEL MENUSTRIP, enlazado los otros forms en el para poderlos visualizar
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio nForm1 = new Inicio();
+            nForm1.TopLevel = true;
+            nForm1.Show();
+            this.Hide();
+        }
+
+        //MENUSTRIP Esta es la opción de CUENTAS
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 nForm3 = new Form3();
+            nForm3.TopLevel = true;
+            nForm3.Show();
+            this.Hide();
+            
+        }
+        //MENUSTRIP Esta es la opción del "botón" PedidosCocina
+        private void pedidosCocinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 nForm2 = new Form2();
+            nForm2.TopLevel = true;
+            nForm2.Show();
+            this.Hide();
+        }
+
+        //ESTA OPCION NOS DEJA SALIR DE LA APP Completamete y detiene la ejecución
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.ExitThread();
         }
     }  
 }

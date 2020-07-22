@@ -16,5 +16,37 @@ namespace Crepas
         {
             InitializeComponent();
         }
+        //ELEMENTOS DEL MENUSTRIP, enlazado los otros forms en el para poderlos visualizar
+        //MenuStrip esta es la opcion INICIO
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio nForm1 = new Inicio();
+            nForm1.TopLevel = true;
+            nForm1.Show();
+            this.Hide();
+        }
+        //MenuStrip esta es la opcion de CUENTAS
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 nForm3 = new Form3();
+            nForm3.TopLevel = true;
+            nForm3.Show();
+            this.Hide();
+        }
+
+        //MenuStrip esta es la opcion de PEIDDOS COCINA
+        private void pedidosCocinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 nForm2 = new Form2();
+            nForm2.TopLevel = true;
+            nForm2.Show();
+            this.Hide();
+        }
+
+        //ESTA OPCION NOS DEJA SALIR DE LA APP Completamete y detiene la ejecución
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.ExitThread();
+        }
     }
 }
