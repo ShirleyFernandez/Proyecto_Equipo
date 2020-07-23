@@ -114,6 +114,7 @@ namespace Crepas
         {
             try
             {
+                
                 int idLista, idProductos;
                 idLista = contList;
                 idProductos = Convert.ToInt32(combo_productos.Text);
@@ -124,7 +125,24 @@ namespace Crepas
                 direccion = txt_dic.Text;
                 estado = "En proceso";
 
-                
+                Pedido pedido = new Pedido();
+                Api api = new Api();
+                Curl curl = new Curl();
+
+                pedido.idLista = idLista;
+                pedido.fecha = fecha;
+                pedido.TipoPedido = TipoPedido;
+                pedido.idProductos = idProductos;
+                pedido.Cliente = Cliente;
+                pedido.direccion = direccion;
+                pedido.estado = estado;
+
+                curl.verbo = Method.POST;
+                curl.json = pedido;
+                api.apicall(curl);
+
+                this.Close();
+              
             }
             catch(Exception ex)
             {
