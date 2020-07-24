@@ -5,85 +5,124 @@ select * from ejemplo;
 
 drop database crepas;
 
-create database crepas;
-use crepas;
+CREATE database crepas;
+Use crepas;
 
-CREATE TABLE IF NOT EXISTS Productos (
-  idProductos int auto_increment primary key primary key,
-  NombreP VARCHAR(45) NOT NULL,
-  Precio INT NOT NULL,
-  seccion varchar(20) NOT NULL);
 
-insert into Productos(NombreP, Precio,seccion) values("crepa_Dulce_Especial",30,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Crepizza",30,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Salada_Especial",40,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Dulce_Tropical",35,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Tropical",30,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Tres_Quesos",40,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Crepastor",40,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Helado",40,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Costa_de_Amor",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Tres_Moras",30,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Platano_con_Durazno",30,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Dulce_Especial",30,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Napolitana",40,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Helado_Vainilla",40,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Rinc_Oreo",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Dulce_Especial",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Galleta_Oreo",35,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("crepa_Platano_con_cajeta",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Philadelphia_con_Mermelada_de_Frambuesa",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Philadelphia_con_Mermelada_de_Fresa",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Philadelphia_con_Mermelada_de_Zarzamora",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Philadelphia_con_Jamon",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Philadelphia_con_Mermelada_de_Fresa",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Nutella_con_nuez",30,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Nutella_con_platano",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Nutella_con_Fresa",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Nutella_con_durazno",25,"Creapa");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Moka_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Moka_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Vainilla_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Vainilla_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Cafe_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Cafe_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Galleta_oreo_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Galleta_oreo_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Rompope_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Rompope_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_ChocoRoll_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_ChocoRoll_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Mazapan_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Mazapan_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Chocolate_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Chocolate_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Capuchino_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Capuchino_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Fresa_chico",20,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Frappes_Fresa_Grande",25,"Frappe");
-insert into Productos(NombreP, Precio,seccion) values("Waffle_Tradicional",30,"Waffle");
-insert into Productos(NombreP, Precio,seccion) values("Waffle_Minis",25,"Waffle");
-insert into Productos(NombreP, Precio,seccion) values("Chamoyadas_con_Caribe",45,"Chamoyadas");
-insert into Productos(NombreP, Precio,seccion) values("Chamoyadas_Chica",20,"Chamoyadas");
-insert into Productos(NombreP, Precio,seccion) values("Chamoyadas_Grande",25,"Chamoyadas");
+/*CREAMOS LA TABLA PRODUCTOS*/
+Create  table CATALOGO_PRODUCTOS(
+idProductos INT NOT NULL PRIMARY KEY, /*Definimos Llave Primaria*/
+Nombre VARCHAR(40),
+Precio INT NOT NULL,
+categoria VARCHAR (30))
+ENGINE = InnoDB;
 
-select * from Productos;
+/*INSERCION DE NUESTROS PRODUCTOS*/
+				/*CREPAS*/
+insert into CATALOGO_PRODUCTOS values(1,"Dulce_Especial",30,"CREPA");
+insert into CATALOGO_PRODUCTOS values(2,"Crepizza",30,"CREPA");
+insert into CATALOGO_PRODUCTOS values(3,"Salada_Especial",40,"CREPA");
+insert into CATALOGO_PRODUCTOS values(4,"Dulce_Tropical",35,"CREPA");
+insert into CATALOGO_PRODUCTOS values(5,"Tropical",30,"CREPA");
+insert into CATALOGO_PRODUCTOS values(6,"Tres_Quesos",40,"CREPA");
+insert into CATALOGO_PRODUCTOS values(7,"Crepastor",40,"CREPA");
+insert into CATALOGO_PRODUCTOS values(8,"Crepa_Helado",40,"CREPA");
+insert into CATALOGO_PRODUCTOS values(9,"Costa_de_Amor",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(10,"Tres_Moras",30,"CREPA");
+insert into CATALOGO_PRODUCTOS values(11,"Platano_con_Durazno",30,"CREPA");
+insert into CATALOGO_PRODUCTOS values(12,"Dulce_Especial",30,"CREPA");
+insert into CATALOGO_PRODUCTOS values(13,"Napolitana",40,"CREPA");
+insert into CATALOGO_PRODUCTOS values(14,"Helado_Vainilla",40,"CREPA");
+insert into CATALOGO_PRODUCTOS values(15,"Rinc-Oreo",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(16,"Dulce_Especial",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(17,"Galleta_Oreo",35,"CREPA");
+insert into CATALOGO_PRODUCTOS values(18,"Platano_con_Cajeta",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(19,"Philadelphia",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(20,"Philadelphia_con_MFrambuesa",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(21,"Philadelphia_con_MFresa",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(22,"Philadelphia_con_MZarzamora",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(23,"Philadelphia_con_Jamon",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(24,"Nutella",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(25,"Nutella_con_nuez",30,"CREPA");
+insert into CATALOGO_PRODUCTOS values(26,"Nutella_con_platano",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(27,"Nutella_con_Fresa",25,"CREPA");
+insert into CATALOGO_PRODUCTOS values(28,"Nutella_con_durazno",25,"CREPA");
 
-CREATE TABLE IF NOT EXISTS Pedidos (
-  idPedidos serial,
-  idLista INT NOT NULL,
-  fecha DATE NOT NULL,
-  TipoPedido VARCHAR(9) NOT NULL,
-  idProductos INT NOT NULL,
-  Cliente varchar(20) NOT NULL,
-  direccion varchar(50),
-  estado varchar(20),
-  cant int not null);
-ALTER TABLE Pedidos ADD constraint pk_id_Pedidos_Lista_Productos primary key (idPedidos, idLista, idProductos);
-ALTER TABLE Pedidos ADD constraint fk_idProductos FOREIGN KEY (idProductos) REFERENCES Productos (idProductos);
+/*BEBIDAS Y/O FRAPPES*/
+insert into CATALOGO_PRODUCTOS values(29,"MokaC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(30,"MokaG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(31,"VainillaC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(32,"VainillaG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(33,"CaféC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(34,"CaféG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(35,"Galleta_OreoC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(36,"Galleta_OreoG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(37,"RompopeC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(38,"RompopeG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(39,"ChocoRollC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(40,"ChocoRollG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(41,"MazapánC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(42,"MazapánG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(43,"ChocolateC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(44,"ChocolateG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(45,"CapuchinoC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(46,"CapuchinoG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(47,"FresaC",20,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(48,"FresaG",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(49,"RompopeC",25,"FRAPPE");
+insert into CATALOGO_PRODUCTOS values(50,"RompopeG",25,"FRAPPE");
 
-INSERT INTO Pedidos(idLista, fecha, TipoPedido, idProductos, Cliente, direccion, estado) VALUES(1,'2020-07-20',"Local", 2, "Juan", "", "Preparacion",2);
+/*OTROS PRODUCTOS*/
+insert into CATALOGO_PRODUCTOS values(51,"Waffle_Tradicional",30,"OTROS");
+insert into CATALOGO_PRODUCTOS values(52,"Waffle_Minis",25,"OTROS");
+insert into CATALOGO_PRODUCTOS values(53,"ChamoyadasCaribe",45,"OTROS");
+insert into CATALOGO_PRODUCTOS values(54,"ChamoyadaC",20,"OTROS");
+insert into CATALOGO_PRODUCTOS values(55,"ChamoyadaG",25,"OTROS");
 
-select * from Pedidos;
-SELECT Pedidos.idLista, Productos.NombreP FROM Pedidos, Productos WHERE idLista=1 AND Pedidos.idProductos = Productos.idProductos;
-DELETE FROM Pedidos WHERE idPedidos=1;
+
+
+/*CREAMOS LA TABLA CLIENTES*/
+CREATE TABLE IF NOT EXISTS CLIENTES (
+  idClientes INT auto_increment  PRIMARY KEY, /*Definimos Llave Primaria*/
+  Nombre VARCHAR(45) NULL,
+  Direccion VARCHAR(45) NULL)
+  ENGINE = InnoDB;
+  
+
+/*CREAMOS LA TABLA PEDIDOS*/
+CREATE TABLE IF NOT EXISTS PEDIDOS(
+idPedidos INT not null PRIMARY KEY,  /*Definimos Llave Primaria*/
+Cantidad INT NOT NULL,
+Tipo_Pedido VARCHAR(45) NOT NULL,
+Estado_Pedido VARCHAR(40),
+/*La tabla requiere de otras dos tablas con respecto a los campos, entonces definimos las relaciones como Llaves Foraneas*/
+FK_idProd INT NOT NULL,
+FK_idCli INT NOT NULL)
+ENGINE = InnoDB;
+/*Asignamos llaves foraneas y referencias a las tablas correspondientes*/
+/*Productos_idProd*/
+ALTER TABLE CATALOGO_PRODUCTOS ADD INDEX (idProductos);
+ALTER TABLE PEDIDOS ADD FOREIGN KEY (FK_idProd) REFERENCES CATALOGO_PRODUCTOS(idProductos);
+/*Clientes_idCli*/
+ALTER TABLE CLIENTES ADD INDEX (idClientes);
+ALTER TABLE PEDIDOS ADD FOREIGN KEY (FK_idCli) REFERENCES CLIENTES(idClientes);
+
+/*CREAMOS LA TABLA VENTAS*/
+CREATE TABLE IF NOT EXISTS VENTAS(
+id_Ventas INT NOT NULL PRIMARY KEY,
+FechaV DATE,
+Productos_idPed INT NOT NULL, /*de acuerdo a la tabla pedidos --su id-- estos se concatenan y se almacenan en este campo*/
+PEDIDOS_CATALOGO_PRODUCTOS_idProductos INT NOT NULL,
+VENTAS_Clientes_idClientes INT NOT NULL)
+ENGINE = InnoDB;
+/*AQUI FALTA AGREGAR LOS ADD INDEX*/
+ALTER TABLE VENTAS ADD foreign key(Productos_idPed) REFERENCES PEDIDOS(idPedidos);
+ALTER TABLE VENTAS ADD foreign key(PEDIDOS_CATALOGO_PRODUCTOS_idProductos) REFERENCES PEDIDOS(FK_idProd);
+ALTER TABLE VENTAS ADD foreign key(VENTAS_Clientes_idClientes) REFERENCES PEDIDOS(FK_idCli);
+
+select * from CATALOGO_PRODUCTOS;
+DELETE FROM CATALOGO_PRODUCTOS WHERE idProductos=1;
+
+INSERT INTO CLIENTES (Nombre,Direccion)VALUES("CLIENTE A","");
+INSERT INTO CLIENTES VALUES('',"CLIENTE B","Mariano_Matamoros_69");
+SELECT * FROM CLIENTES;

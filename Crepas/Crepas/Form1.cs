@@ -114,28 +114,32 @@ namespace Crepas
         {
             try
             {
-                
-                int idLista, idProductos;
-                idLista = contList;
-                idProductos = Convert.ToInt32(combo_productos.Text);
-                string fecha, TipoPedido, Cliente, direccion = " ", estado;
-                fecha = DateTime.Today.ToString("yyyy-MM-dd");
-                TipoPedido = combo_tipo.Text;
-                Cliente = txt_cliente.Text;
-                direccion = txt_dic.Text;
-                estado = "En proceso";
+
+                int id_Ventas, FK_idProd, idPedidos, Cantidad, FK_idCli;
+                id_Ventas = contList;
+                FK_idProd = Convert.ToInt32(combo_productos.Text);
+                string FechaV, Tipo_Pedido, Nombre, Direccion = " ", Estado_Pedido;
+                FechaV = DateTime.Today.ToString("yyyy-MM-dd");
+                Tipo_Pedido = combo_tipo.Text;
+                Nombre = txt_cliente.Text;
+                Direccion = txt_dic.Text;
+                Estado_Pedido = "En proceso";
+                Cantidad = Convert.ToInt32(txt_cant.Text);
+                idPedidos = Convert.ToInt32(combo_productos.Text);
 
                 Pedido pedido = new Pedido();
                 Api api = new Api();
                 Curl curl = new Curl();
 
-                pedido.idLista = idLista;
-                pedido.fecha = fecha;
-                pedido.TipoPedido = TipoPedido;
-                pedido.idProductos = idProductos;
-                pedido.Cliente = Cliente;
-                pedido.direccion = direccion;
-                pedido.estado = estado;
+                pedido.id_Ventas = id_Ventas;
+                pedido.FechaV = FechaV;
+                pedido.Tipo_Pedido = Tipo_Pedido;
+                pedido.FK_idProd = FK_idProd;
+                pedido.Nombre = Nombre;
+                pedido.Direccion = Direccion;
+                pedido.Estado_Pedido = Estado_Pedido;
+                pedido.idPedidos = idPedidos;
+                pedido.Cantidad = Cantidad;
 
                 curl.verbo = Method.POST;
                 curl.json = pedido;
