@@ -111,14 +111,14 @@ ALTER TABLE PEDIDOS ADD FOREIGN KEY (FK_idCli) REFERENCES CLIENTES(idClientes);
 CREATE TABLE IF NOT EXISTS VENTAS(
 id_Ventas INT NOT NULL PRIMARY KEY,
 FechaV DATE,
-Productos_idPed INT NOT NULL, /*de acuerdo a la tabla pedidos --su id-- estos se concatenan y se almacenan en este campo*/
-PEDIDOS_CATALOGO_PRODUCTOS_idProductos INT NOT NULL,
-VENTAS_Clientes_idClientes INT NOT NULL)
+idPed INT NOT NULL, /*de acuerdo a la tabla pedidos --su id-- estos se concatenan y se almacenan en este campo*/
+FK_idProductos INT NOT NULL,
+FK_idClientes INT NOT NULL)
 ENGINE = InnoDB;
 /*AQUI FALTA AGREGAR LOS ADD INDEX*/
-ALTER TABLE VENTAS ADD foreign key(Productos_idPed) REFERENCES PEDIDOS(idPedidos);
-ALTER TABLE VENTAS ADD foreign key(PEDIDOS_CATALOGO_PRODUCTOS_idProductos) REFERENCES PEDIDOS(FK_idProd);
-ALTER TABLE VENTAS ADD foreign key(VENTAS_Clientes_idClientes) REFERENCES PEDIDOS(FK_idCli);
+ALTER TABLE VENTAS ADD foreign key(idPed) REFERENCES PEDIDOS(idPedidos);
+ALTER TABLE VENTAS ADD foreign key(idProductos) REFERENCES PEDIDOS(FK_idProd);
+ALTER TABLE VENTAS ADD foreign key(idClientes) REFERENCES PEDIDOS(FK_idCli);
 
 select * from CATALOGO_PRODUCTOS;
 DELETE FROM CATALOGO_PRODUCTOS WHERE idProductos=1;
@@ -126,3 +126,7 @@ DELETE FROM CATALOGO_PRODUCTOS WHERE idProductos=1;
 INSERT INTO CLIENTES (Nombre,Direccion)VALUES("CLIENTE A","");
 INSERT INTO CLIENTES VALUES('',"CLIENTE B","Mariano_Matamoros_69");
 SELECT * FROM CLIENTES;
+
+INSERT INTO PEDIDOS(idPedidos,Cantidad,Tipo_Pedido,Estado_Pedido,FK_idProd,FK_idCli) VALUES(1,2,"LOCAL","PREPARACIÓN",5,1);
+
+INSERT INTO VENTAS(id_Ventas,FechaV,idPed,idProductos,idClientes) VALUES(1,'2020-07-24',1,5,1);
