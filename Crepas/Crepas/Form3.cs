@@ -48,5 +48,13 @@ namespace Crepas
         {
             Application.ExitThread();
         }
+        //MUENU STRIP esta opción del botón secundario Opciones--->agregarcliente
+        private void registroClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 nForm4 = new Form4();
+            nForm4.TopLevel = true;
+            nForm4.Show();
+            this.Hide();
+        }
     }
 }

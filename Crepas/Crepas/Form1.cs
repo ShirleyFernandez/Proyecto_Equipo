@@ -103,6 +103,14 @@ namespace Crepas
             nForm2.Show();
             this.Hide();
         }
+        //MUENU STRIP esta opción del botón secundario Opciones--->agregarcliente
+        private void agregarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 nForm4 = new Form4();
+            nForm4.TopLevel = true;
+            nForm4.Show();
+            this.Hide();
+        }
 
         //ESTA OPCION NOS DEJA SALIR DE LA APP Completamete y detiene la ejecución
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -153,5 +161,12 @@ namespace Crepas
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }  
 }
