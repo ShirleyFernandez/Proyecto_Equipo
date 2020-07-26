@@ -25,20 +25,40 @@ namespace Crepas
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            try
+            {
+                Crepas producto = new Crepas();
+                Api api = new Api();
+                Curl curl = new Curl
+                {
+                    url = "http://192.168.99.100/esp32/public/api/Productos",
+                    verbo = Method.GET,
+                    json = producto
+                };
+                api.apicall(curl);
+                string prueba = producto.Nombre;
+                MessageBox.Show(prueba);
+                //combo_productos.ValueMember = producto.idProductos.ToString();
+                //combo_productos.DisplayMember = producto.Nombre;
+                //combo_productos.DataSource = producto.Nombre;
 
+                //txt_cant.Text = producto.Nombre;
+                this.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(""+ex);
+            }
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             contList++;
             txt_cant.Clear();
-            txt_cliente.Clear();
-            txt_dic.Clear();
         }
 
         private void txt_cant_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Valida.SoloNumeros(e);
+            //Valida.SoloNumeros(e);
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -46,22 +66,7 @@ namespace Crepas
             Valida.SoloLetras(e);
         }
 
-        private void combo_tipo_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            if (combo_tipo.SelectedItem.ToString() == "Local")
-            {
-                txt_dic.ReadOnly = true;
-            }
-            else
-            {
-                txt_dic.ReadOnly = false;
-            }
-        }
-
-        private void Pedidos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -129,13 +134,11 @@ namespace Crepas
                 string FechaV, Tipo_Pedido, Nombre, Direccion = " ", Estado_Pedido;
                 FechaV = DateTime.Today.ToString("yyyy-MM-dd");
                 Tipo_Pedido = combo_tipo.Text;
-                Nombre = txt_cliente.Text;
-                Direccion = txt_dic.Text;
                 Estado_Pedido = "En proceso";
                 Cantidad = Convert.ToInt32(txt_cant.Text);
                 idPedidos = Convert.ToInt32(combo_productos.Text);
 
-                Pedido pedido = new Pedido();
+                Crepas pedido = new Crepas();
                 Api api = new Api();
                 Curl curl = new Curl();
 
@@ -143,7 +146,6 @@ namespace Crepas
                 pedido.FechaV = FechaV;
                 pedido.Tipo_Pedido = Tipo_Pedido;
                 pedido.FK_idProd = FK_idProd;
-                pedido.Nombre = Nombre;
                 pedido.Direccion = Direccion;
                 pedido.Estado_Pedido = Estado_Pedido;
                 pedido.idPedidos = idPedidos;
