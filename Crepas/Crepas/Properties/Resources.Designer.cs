@@ -73,6 +73,16 @@ namespace Crepas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aqui {
+            get {
+                object obj = ResourceManager.GetObject("aqui", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_C {
             get {
                 object obj = ResourceManager.GetObject("BTN_C", resourceCulture);
@@ -103,6 +113,16 @@ namespace Crepas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cocina {
+            get {
+                object obj = ResourceManager.GetObject("cocina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eliminar {
             get {
                 object obj = ResourceManager.GetObject("eliminar", resourceCulture);
@@ -126,6 +146,16 @@ namespace Crepas.Properties {
         internal static System.Drawing.Bitmap hola {
             get {
                 object obj = ResourceManager.GetObject("hola", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LISTP {
+            get {
+                object obj = ResourceManager.GetObject("LISTP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
