@@ -80,3 +80,5 @@ C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\Syste
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\bin\Debug\System.ValueTuple.xml
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\obj\Debug\Crepas.Form4.resources
 C:\Users\rogel\Desktop\rogelio\LI1\Proyecto_equipo\Crepas\Crepas\obj\Debug\Crepas.TomaPedido.resources
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.Form4.resources
+C:\Users\Shirley Fernandez\Documents\GitHub\Proyecto_Equipop\Crepas\Crepas\obj\Debug\Crepas.TomaPedido.resources

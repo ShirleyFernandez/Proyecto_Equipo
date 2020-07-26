@@ -169,6 +169,36 @@ namespace Crepas
 
         }
 
-     
+        //BOTON QUE ABRE LA VENTANA "PEDIDOS"
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 nForm2 = new Form2();
+            nForm2.TopLevel = true;
+            nForm2.Show();
+            this.Hide();
+        }
+
+        //BOTÓN QUE ABRE LA VENTANA CLIENTES
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 nForm4 = new Form4();
+            nForm4.TopLevel = true;
+            nForm4.Show();
+            this.Hide();
+        }
+
+        //BOTÓN QUE ABRE LA VENTANA CUENTAS
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 nForm3 = new Form3();
+            nForm3.TopLevel = true;
+            nForm3.Show();
+            this.Hide();
+        }
+        //BOTÓN CIERRA LA VENTANA "SALIR"
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.ExitThread();
+        }
     }  
 }

@@ -182,5 +182,38 @@
   <ItemGroup>
     <None Include="Resources\fondo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rinconcito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tomap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SALIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mostrar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
