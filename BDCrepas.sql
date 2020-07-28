@@ -83,7 +83,7 @@ insert into CATALOGO_PRODUCTOS values(55,"ChamoyadaG",25,"OTROS");
 
 /*CREAMOS LA TABLA CLIENTES*/
 CREATE TABLE IF NOT EXISTS CLIENTES (
-  idClientes INT auto_increment  PRIMARY KEY, /*Definimos Llave Primaria*/
+  idClientes INT auto_increment PRIMARY KEY, /*Definimos Llave Primaria*/
   Nombre VARCHAR(45) NULL,
   Direccion VARCHAR(45) NULL)
   ENGINE = InnoDB;
@@ -109,7 +109,7 @@ ALTER TABLE PEDIDOS ADD FOREIGN KEY (FK_idCli) REFERENCES CLIENTES(idClientes);
 
 /*CREAMOS LA TABLA VENTAS*/
 CREATE TABLE IF NOT EXISTS VENTAS(
-id_Ventas INT NOT NULL PRIMARY KEY,
+id_Ventas INT NOT NULL,
 FechaV DATE,
 FK_idPedidos INT NOT NULL, /*de acuerdo a la tabla pedidos --su id-- estos se concatenan y se almacenan en este campo*/
 FK_idProd INT NOT NULL,
@@ -123,10 +123,17 @@ ALTER TABLE VENTAS ADD foreign key(FK_idCli) REFERENCES PEDIDOS(FK_idCli);
 select * from CATALOGO_PRODUCTOS;
 DELETE FROM CATALOGO_PRODUCTOS WHERE idProductos=1;
 
-INSERT INTO CLIENTES (Nombre,Direccion)VALUES("CLIENTE A","");
-INSERT INTO CLIENTES VALUES('',"CLIENTE B","Mariano_Matamoros_69");
+INSERT INTO CLIENTES (Nombre,Direccion)VALUES("Cliente no frecuente","");
+INSERT INTO CLIENTES VALUES("CLIENTE B","Mariano_Matamoros_69");
 SELECT * FROM CLIENTES;
 
-INSERT INTO PEDIDOS(idPedidos,Cantidad,Tipo_Pedido,Estado_Pedido,FK_idProd,FK_idCli) VALUES(1,2,"LOCAL","PREPARACIÓN",5,1);
+INSERT INTO PEDIDOS(idPedidos,Cantidad,Tipo_Pedido,Estado_Pedido,FK_idProd,FK_idCli) VALUES(2,2,"LOCAL","PREPARACIÓN",6,1);
 
-INSERT INTO VENTAS(id_Ventas,FechaV,FK_idPedidos,FK_idProd,FK_idCli) VALUES(1,'2020-07-24',1,5,1);
+INSERT INTO VENTAS(id_Ventas,FechaV,FK_idPedidos,FK_idProd,FK_idCli) VALUES(1,'2020-07-24',2,6,1);
+
+select * from PEDIDOS;
+select * from VENTAS;
+
+
+SELECT idProductos, Nombre, Precio, categoria FROM CATALOGO_PRODUCTOS;
+SELECT id_Ventas, FechaV, FK_idPedidos, FK_idProd, FK_idCli FROM VENTAS;

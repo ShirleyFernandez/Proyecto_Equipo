@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.l_total = new System.Windows.Forms.Label();
@@ -51,9 +52,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(199, 73);
+            this.label1.Location = new System.Drawing.Point(149, 59);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(404, 52);
+            this.label1.Size = new System.Drawing.Size(319, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro del Cliente";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -61,9 +63,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(236, 125);
+            this.label2.Location = new System.Drawing.Point(177, 102);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(313, 17);
+            this.label2.Size = new System.Drawing.Size(232, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Los clientes los registramos en este apartado :D";
             // 
@@ -71,28 +74,25 @@
             // 
             this.l_total.AutoSize = true;
             this.l_total.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_total.Location = new System.Drawing.Point(218, 261);
-            this.l_total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.l_total.Location = new System.Drawing.Point(164, 212);
             this.l_total.Name = "l_total";
-            this.l_total.Size = new System.Drawing.Size(0, 27);
+            this.l_total.Size = new System.Drawing.Size(0, 22);
             this.l_total.TabIndex = 31;
             // 
             // txt_dic
             // 
-            this.txt_dic.Location = new System.Drawing.Point(41, 331);
-            this.txt_dic.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_dic.Location = new System.Drawing.Point(31, 269);
             this.txt_dic.Name = "txt_dic";
-            this.txt_dic.Size = new System.Drawing.Size(701, 22);
+            this.txt_dic.Size = new System.Drawing.Size(527, 20);
             this.txt_dic.TabIndex = 30;
             // 
             // Direccion
             // 
             this.Direccion.AutoSize = true;
             this.Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Direccion.Location = new System.Drawing.Point(36, 285);
-            this.Direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Direccion.Location = new System.Drawing.Point(27, 232);
             this.Direccion.Name = "Direccion";
-            this.Direccion.Size = new System.Drawing.Size(131, 25);
+            this.Direccion.Size = new System.Drawing.Size(108, 20);
             this.Direccion.TabIndex = 29;
             this.Direccion.Text = "DIRECCION";
             this.Direccion.Click += new System.EventHandler(this.Direccion_Click);
@@ -101,28 +101,27 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 197);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(27, 160);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 25);
+            this.label4.Size = new System.Drawing.Size(164, 20);
             this.label4.TabIndex = 26;
             this.label4.Text = "NOMBRE CLIENTE";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txt_cliente
             // 
-            this.txt_cliente.Location = new System.Drawing.Point(41, 235);
-            this.txt_cliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_cliente.Location = new System.Drawing.Point(31, 191);
             this.txt_cliente.Name = "txt_cliente";
-            this.txt_cliente.Size = new System.Drawing.Size(701, 22);
+            this.txt_cliente.Size = new System.Drawing.Size(527, 20);
             this.txt_cliente.TabIndex = 25;
             // 
             // lbl_total
             // 
             this.lbl_total.AutoSize = true;
-            this.lbl_total.Location = new System.Drawing.Point(426, 205);
+            this.lbl_total.Location = new System.Drawing.Point(320, 167);
+            this.lbl_total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(11, 17);
+            this.lbl_total.Size = new System.Drawing.Size(9, 13);
             this.lbl_total.TabIndex = 32;
             this.lbl_total.Text = "\'";
             // 
@@ -137,27 +136,27 @@
             this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 33;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.inicioToolStripMenuItem.Text = "Incio";
             // 
             // pedidosToolStripMenuItem
             // 
             this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.pedidosToolStripMenuItem.Text = "Cuentas";
             // 
             // pedidosCocinaToolStripMenuItem
             // 
             this.pedidosCocinaToolStripMenuItem.Name = "pedidosCocinaToolStripMenuItem";
-            this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
+            this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.pedidosCocinaToolStripMenuItem.Text = "Pedidos Cocina";
             // 
             // opcionesToolStripMenuItem
@@ -166,38 +165,38 @@
             this.salirToolStripMenuItem,
             this.agregarClienteToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // agregarClienteToolStripMenuItem
             // 
             this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
             this.agregarClienteToolStripMenuItem.Click += new System.EventHandler(this.agregarClienteToolStripMenuItem_Click);
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(599, 379);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_guardar.Location = new System.Drawing.Point(449, 308);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(143, 28);
+            this.btn_guardar.Size = new System.Drawing.Size(107, 23);
             this.btn_guardar.TabIndex = 34;
             this.btn_guardar.Text = "Agregar Cliente";
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.l_total);
@@ -208,6 +207,8 @@
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form4";
             this.Text = "Form4";
             this.menuStrip1.ResumeLayout(false);

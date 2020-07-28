@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Org.BouncyCastle.Crypto.Tls;
+using RestSharp;
+using RestSharp.Serialization.Json;
 
 namespace Crepas
 {
@@ -58,7 +61,43 @@ namespace Crepas
         //Este no cuenta xd
         private void Form2_Load(object sender, EventArgs e)
         {
-          
+            int index = 0;
+
+            //Producto
+            Producto producto = new Producto();
+            Api apiprod = new Api();
+            Curl curlprod = new Curl
+            {
+                url = "http://192.168.99.100/esp32-api/public/api/Productos",
+                verbo = Method.GET,
+                json = producto
+            };
+
+            string pruebaprod = apiprod.apiDes(curlprod);
+            Producto[] productos = System.Text.Json.JsonSerializer.Deserialize<Producto[]>(pruebaprod);
+
+            //Pedidos
+            Pedido pedido = new Pedido();
+            Api apiped = new Api();
+            Curl curlped = new Curl()
+            {
+                url = "http://192.168.99.100/esp32-api/public/api/Pedidos",
+                verbo = Method.GET,
+                json = pedido
+            };
+
+
+            string pedTemp = apiped.apiDes(curlped);
+            Pedido[] pedidos = System.Text.Json.JsonSerializer.Deserialize<Pedido[]>(pedTemp);
+            for (int i = 0; i < pedidos.Length; i++)
+            {
+                if(pedidos[i].Estado_Pedido == "PREPARACIÓN")
+                {
+                    checkedListBox1.Items.Insert(index,pedidos[i].idPedidos +" | "+productos[pedidos[i].FK_idProd-1].Nombre +" | "+pedidos[i].Estado_Pedido);
+                    index++;
+                }
+            }
+
         }
         //MUENU STRIP esta opción del botón secundario Opciones--->agregarcliente
         private void registroClientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +106,32 @@ namespace Crepas
             nForm4.TopLevel = true;
             nForm4.Show();
             this.Hide();
+        }
+
+        private void btn_terminar_Click(object sender, EventArgs e)
+        {
+            foreach (object itemChecked in checkedListBox1.CheckedItems)
+            {
+                string texto = itemChecked.ToString();
+                int startIndex = 0;
+                int length = 2;
+                String substring = texto.Substring(startIndex, length);
+                //MessageBox.Show(substring);
+
+                Pedido pedido = new Pedido();
+                Api api = new Api();
+                Curl curl = new Curl();
+
+                pedido.idPedidos = Convert.ToInt32(substring);
+                pedido.Estado_Pedido = "LISTO";
+
+
+                curl.verbo = Method.PATCH;
+                curl.json = pedido;
+                api.apicall(curl);
+            }
+
+            checkedListBox1.Items.RemoveAt(checkedListBox1.SelectedIndex);
         }
     }
 }

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Org.BouncyCastle.Crypto.Tls;
+using RestSharp;
+using RestSharp.Serialization.Json;
 
 namespace Crepas
 {
@@ -55,6 +58,112 @@ namespace Crepas
             nForm4.TopLevel = true;
             nForm4.Show();
             this.Hide();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            Venta venta = new Venta();
+            Api apiven = new Api();
+            Curl curlven = new Curl()
+            {
+                url = "http://192.168.99.100/esp32-api/public/api/Ventas",
+                verbo = Method.GET,
+                json = venta
+            };
+
+            string venTemp = apiven.apiDes(curlven);
+            Venta[] ventas = System.Text.Json.JsonSerializer.Deserialize<Venta[]>(venTemp);
+
+            DataTable dtvent = new DataTable();
+            dtvent.Columns.Add("FechaV");
+
+            for (int i = 0; i < ventas.Length; i++)
+            {
+                for (int j = 0; j < ventas.Length; j++) {
+                    if (i != j)
+                    {
+                        if (ventas[i].FechaV == ventas[j].FechaV)
+                        {
+                            ventas[i].FechaV = "";
+                        }
+                    }
+                }
+            }
+
+            for(int k = 0; k < ventas.Length; k++)
+            {
+                if (ventas[k].FechaV != "")
+                {
+                    DataRow dataRowVent = dtvent.NewRow();
+                    dataRowVent["FechaV"] = ventas[k].FechaV;
+                    dtvent.Rows.Add(dataRowVent);
+                }
+            }
+
+            comboBox1.ValueMember = "FechaV";
+            comboBox1.DisplayMember = "FechaV";
+            comboBox1.DataSource = dtvent;
+        }
+
+        private void btn_ver_Click(object sender, EventArgs e)
+        {
+            int ganancia = 0;
+            string fecha = comboBox1.Text;
+            
+            //Producto
+            Producto producto = new Producto();
+            Api apiprod = new Api();
+            Curl curlprod = new Curl
+            {
+                url = "http://192.168.99.100/esp32-api/public/api/Productos",
+                verbo = Method.GET,
+                json = producto
+            };
+
+            string pruebaprod = apiprod.apiDes(curlprod);
+            Producto[] productos = System.Text.Json.JsonSerializer.Deserialize<Producto[]>(pruebaprod);
+
+            //Pedido
+            Pedido pedido = new Pedido();
+            Api apiped = new Api();
+            Curl curlped = new Curl()
+            {
+                url = "http://192.168.99.100/esp32-api/public/api/Pedidos",
+                verbo = Method.GET,
+                json = pedido
+            };
+            string pedTemp = apiped.apiDes(curlped);
+            Pedido[] pedidos = System.Text.Json.JsonSerializer.Deserialize<Pedido[]>(pedTemp);
+
+            //Venta
+            Venta venta = new Venta();
+            Api apiven = new Api();
+            Curl curlven = new Curl()
+            {
+                url = "http://192.168.99.100/esp32-api/public/api/Ventas",
+                verbo = Method.GET,
+                json = venta
+            };
+            int index = 0;
+            string venTemp = apiven.apiDes(curlven);
+            Venta[] ventas = System.Text.Json.JsonSerializer.Deserialize<Venta[]>(venTemp);
+            for (int i = 0; i < ventas.Length; i++)
+            {
+                if (ventas[i].FechaV == fecha)
+                {
+                    
+                    int cant = pedidos[ventas[i].FK_idPedidos-1].Cantidad;
+                    int precio = productos[ventas[i].FK_idProd].Precio;
+                    int total = cant * precio;
+                    listBox1.Items.Insert(index, ventas[i].id_Ventas + " | " + productos[ventas[i].FK_idProd].Nombre + " | " + cant + " | " + total);
+                    index++;
+                    ganancia = ganancia + total;
+                    
+                    
+                }
+            }
+
+            lbl_gan.Text = ganancia.ToString();
         }
     }
 }

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Org.BouncyCastle.Crypto.Tls;
+using RestSharp;
+using RestSharp.Serialization.Json;
 
 namespace Crepas
 {
@@ -38,6 +41,27 @@ namespace Crepas
             nForm4.TopLevel = true;
             nForm4.Show();
             this.Hide();
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            Api apiCli = new Api();
+            Curl curlCli = new Curl();
+
+            string Nombre = txt_cliente.Text;
+            string Direccion = txt_dic.Text;
+
+            cliente.Nombre = Nombre;
+            cliente.Direccion = Direccion;
+
+            curlCli.verbo = Method.POST;
+            curlCli.json = cliente;
+            curlCli.url = "http://192.168.99.100/esp32-api/public/api/Clientes";
+            apiCli.apicall(curlCli);
+
+            txt_cliente.Clear();
+            txt_dic.Clear();
         }
     }
 }
