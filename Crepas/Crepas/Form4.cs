@@ -63,5 +63,34 @@ namespace Crepas
             txt_cliente.Clear();
             txt_dic.Clear();
         }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio nForm1 = new Inicio();
+            nForm1.TopLevel = true;
+            nForm1.Show();
+            this.Hide();
+        }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 nForm3 = new Form3();
+            nForm3.TopLevel = true;
+            nForm3.Show();
+            this.Hide();
+        }
+
+        private void pedidosCocinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 nForm2 = new Form2();
+            nForm2.TopLevel = true;
+            nForm2.Show();
+            this.Hide();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.ExitThread();
+        }
     }
 }

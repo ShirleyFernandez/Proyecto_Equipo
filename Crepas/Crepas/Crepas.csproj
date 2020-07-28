@@ -227,5 +227,32 @@
   <ItemGroup>
     <None Include="Resources\CUENTA.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tomarp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PTerminado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mostrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_AG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notacliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOTA_CUENTAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gananc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
