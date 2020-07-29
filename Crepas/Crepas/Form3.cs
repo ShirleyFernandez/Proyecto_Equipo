@@ -152,7 +152,7 @@ namespace Crepas
                 if (ventas[i].FechaV == fecha)
                 {
                     
-                    int cant = pedidos[ventas[i].FK_idPedidos-1].Cantidad;
+                    int cant = pedidos[ventas[i].FK_idPedidos].Cantidad;
                     int precio = productos[ventas[i].FK_idProd].Precio;
                     int total = cant * precio;
                     listBox1.Items.Insert(index, ventas[i].id_Ventas + " | " + productos[ventas[i].FK_idProd].Nombre + " | " + cant + " | " + total);

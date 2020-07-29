@@ -91,9 +91,10 @@ namespace Crepas
             Pedido[] pedidos = System.Text.Json.JsonSerializer.Deserialize<Pedido[]>(pedTemp);
             for (int i = 0; i < pedidos.Length; i++)
             {
-                if(pedidos[i].Estado_Pedido == "PREPARACIÓN")
+                if (pedidos[i].Estado_Pedido == "PREPARACIÓN")
                 {
-                    checkedListBox1.Items.Insert(index,pedidos[i].idPedidos +" | "+productos[pedidos[i].FK_idProd-1].Nombre +" | "+pedidos[i].Estado_Pedido);
+
+                    checkedListBox1.Items.Insert(index, pedidos[i].idPedidos + " | " + productos[pedidos[i].FK_idProd - 1].Nombre + " | " + pedidos[i].Estado_Pedido + " X " + pedidos[i].Cantidad);
                     index++;
                 }
             }

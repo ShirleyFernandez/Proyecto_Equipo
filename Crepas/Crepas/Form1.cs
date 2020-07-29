@@ -272,35 +272,74 @@ namespace Crepas
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
+            String substring = null;
             foreach (object itemChecked in checkedListBox1.CheckedItems)
             {
                 string texto = itemChecked.ToString();
                 int startIndex = 0;
                 int length = 2;
-                String substring = texto.Substring(startIndex, length);
+                substring = texto.Substring(startIndex, length);
                 //MessageBox.Show(substring);
-
-                Pedido pedido = new Pedido();
-                Api api = new Api();
-                Curl curl = new Curl();
-
-                pedido.idPedidos = Convert.ToInt32(substring);
-               
-
-                curl.verbo = Method.DELETE;
-                curl.json = pedido;
-                api.apicall(curl);
-
-                Venta venta = new Venta();
-                Api apiven = new Api();
-                Curl curlvent = new Curl();
-
-                venta.FK_idPedidos = Convert.ToInt32(substring);
-
-                curlvent.verbo = Method.DELETE;
-                curlvent.json = venta;
-                curlvent.url = "http://192.168.99.100/esp32-api/public/api/Ventas";
             }
+            //Restar total
+            Pedido pedidototal = new Pedido();
+            Api apiped = new Api();
+            Curl curlped = new Curl()
+            {
+                verbo = Method.GET,
+                json = pedidototal,
+                url = "http://192.168.99.100/esp32-api/public/api/Pedidos"
+            };
+
+            string pruebaped = apiped.apiDes(curlped);
+            Pedido[] pedidos = System.Text.Json.JsonSerializer.Deserialize<Pedido[]>(pruebaped);
+
+            Producto producto = new Producto();
+            Api apiprod = new Api();
+            Curl curlprod = new Curl
+            {
+                url = "http://192.168.99.100/esp32-api/public/api/Productos",
+                verbo = Method.GET,
+                json = producto
+            };
+
+            string pruebaprod = apiprod.apiDes(curlprod);
+            Producto[] productos = System.Text.Json.JsonSerializer.Deserialize<Producto[]>(pruebaprod);
+
+            for(int i = 0; i < pedidos.Length; i++)
+            {
+                int s1, s2;
+                if(pedidos[i].idPedidos == Convert.ToInt32(substring))
+                {
+                    s1 = productos[pedidos[i].FK_idProd - 1].Precio;
+                    s2 = pedidos[i].Cantidad;
+
+                    total -= (s1 * s2);
+                    lbl_total.Text = total.ToString();
+                }
+            }
+
+            Venta venta = new Venta();
+            Api apiven = new Api();
+            Curl curlvent = new Curl();
+
+            venta.FK_idPedidos = Convert.ToInt32(substring);
+
+            curlvent.verbo = Method.DELETE;
+            curlvent.json = venta;
+            curlvent.url = "http://192.168.99.100/esp32-api/public/api/Ventas";
+            apiven.apicall(curlvent);
+
+            Pedido pedido = new Pedido();
+            Api api = new Api();
+            Curl curl = new Curl();
+
+            pedido.idPedidos = Convert.ToInt32(substring);
+
+
+            curl.verbo = Method.DELETE;
+            curl.json = pedido;
+            api.apicall(curl);
 
             checkedListBox1.Items.RemoveAt(checkedListBox1.SelectedIndex);
 
