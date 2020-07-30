@@ -80,6 +80,32 @@ namespace Crepas
         public int FK_idCli { set; get; }
     }
 
+    class Fecha
+    {
+        public string FechaV { set; get; }
+    }
+
+    class Caja
+    {
+        public int id_Ventas { set; get; }
+
+        public string Nombre { set; get; }
+
+        public int FK_idPedidos { set; get; }
+
+        public int Precio { set; get; }
+
+        public int Cantidad { set; get; }
+
+        public string FechaV { set; get; }
+    }
+
+    class Ultimop
+    {
+        public int id_Ventas { set; get; }
+
+        public int idPedidos { set; get; }
+    }
     class Curl
     {
         public string url { set; get; }

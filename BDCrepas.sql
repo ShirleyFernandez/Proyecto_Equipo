@@ -119,17 +119,16 @@ ENGINE = InnoDB;
 ALTER TABLE VENTAS ADD foreign key(FK_idPedidos) REFERENCES PEDIDOS(idPedidos);
 ALTER TABLE VENTAS ADD foreign key(FK_idProd) REFERENCES PEDIDOS(FK_idProd);
 ALTER TABLE VENTAS ADD foreign key(FK_idCli) REFERENCES PEDIDOS(FK_idCli);
+INSERT INTO CLIENTES (Nombre,Direccion)VALUES("Cliente no frecuente","");
 
 select * from CATALOGO_PRODUCTOS;
 DELETE FROM CATALOGO_PRODUCTOS WHERE idProductos=1;
-
-INSERT INTO CLIENTES (Nombre,Direccion)VALUES("Cliente no frecuente","");
 INSERT INTO CLIENTES VALUES("CLIENTE B","Mariano_Matamoros_69");
 SELECT * FROM CLIENTES;
 
-INSERT INTO PEDIDOS(idPedidos,Cantidad,Tipo_Pedido,Estado_Pedido,FK_idProd,FK_idCli) VALUES(2,2,"LOCAL","PREPARACIÓN",6,1);
+INSERT INTO PEDIDOS(idPedidos,Cantidad,Tipo_Pedido,Estado_Pedido,FK_idProd,FK_idCli) VALUES(2,2,"LOCAL","PREPARACIÓN",25,1);
 
-INSERT INTO VENTAS(id_Ventas,FechaV,FK_idPedidos,FK_idProd,FK_idCli) VALUES(1,'2020-07-24',2,6,1);
+INSERT INTO VENTAS(id_Ventas,FechaV,FK_idPedidos,FK_idProd,FK_idCli) VALUES(1,'2020-07-24',2,25,1);
 
 select * from PEDIDOS;
 select * from VENTAS;
@@ -137,3 +136,9 @@ select * from VENTAS;
 
 SELECT idProductos, Nombre, Precio, categoria FROM CATALOGO_PRODUCTOS;
 SELECT id_Ventas, FechaV, FK_idPedidos, FK_idProd, FK_idCli FROM VENTAS;
+SELECT VENTAS.id_Ventas, VENTAS.FK_idPedidos ,CATALOGO_PRODUCTOS.Nombre, CATALOGO_PRODUCTOS.Precio, PEDIDOS.Cantidad 
+FROM VENTAS, CATALOGO_PRODUCTOS, PEDIDOS WHERE FechaV= '2020-07-24' 
+AND VENTAS.FK_idProd = CATALOGO_PRODUCTOS.idProductos
+AND VENTAS.FK_idPedidos = PEDIDOS.idPedidos;
+SELECT DISTINCT FechaV FROM VENTAS;
+SELECT MAX(PEDIDOS.idPedidos) AS UP, MAX(VENTAS.id_Ventas) FROM PEDIDOS, VENTAS;

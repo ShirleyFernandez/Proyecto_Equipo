@@ -62,108 +62,80 @@ namespace Crepas
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            Venta venta = new Venta();
-            Api apiven = new Api();
-            Curl curlven = new Curl()
+            Fecha fecha = new Fecha();
+            Api apifech = new Api();
+            Curl curlfech = new Curl()
             {
-                url = "http://192.168.99.100/esp32-api/public/api/Ventas",
+                url = "http://192.168.99.100/esp32-api/public/api/Fechas",
                 verbo = Method.GET,
-                json = venta
+                json = fecha
             };
 
-            string venTemp = apiven.apiDes(curlven);
-            Venta[] ventas = System.Text.Json.JsonSerializer.Deserialize<Venta[]>(venTemp);
+            string fechTemp = apifech.apiDes(curlfech);
+            Fecha[] fechas = System.Text.Json.JsonSerializer.Deserialize<Fecha[]>(fechTemp);
 
-            DataTable dtvent = new DataTable();
-            dtvent.Columns.Add("FechaV");
+            DataTable dtfecha = new DataTable();
+            dtfecha.Columns.Add("FechaV");
 
-            for (int i = 0; i < ventas.Length; i++)
+            for (int i = 0; i < fechas.Length; i++)
             {
-                for (int j = 0; j < ventas.Length; j++) {
-                    if (i != j)
-                    {
-                        if (ventas[i].FechaV == ventas[j].FechaV)
-                        {
-                            ventas[i].FechaV = "";
-                        }
-                    }
-                }
-            }
-
-            for(int k = 0; k < ventas.Length; k++)
-            {
-                if (ventas[k].FechaV != "")
-                {
-                    DataRow dataRowVent = dtvent.NewRow();
-                    dataRowVent["FechaV"] = ventas[k].FechaV;
-                    dtvent.Rows.Add(dataRowVent);
-                }
+                DataRow dataRowVent = dtfecha.NewRow();
+                dataRowVent["FechaV"] = fechas[i].FechaV;
+                dtfecha.Rows.Add(dataRowVent);
             }
 
             comboBox1.ValueMember = "FechaV";
             comboBox1.DisplayMember = "FechaV";
-            comboBox1.DataSource = dtvent;
+            comboBox1.DataSource = dtfecha;
         }
 
         private void btn_ver_Click(object sender, EventArgs e)
         {
             int ganancia = 0;
             string fecha = comboBox1.Text;
-            
-            //Producto
-            Producto producto = new Producto();
-            Api apiprod = new Api();
-            Curl curlprod = new Curl
+
+            Caja caja = new Caja();
+            caja.FechaV = fecha;
+            Api apicaj = new Api();
+            Curl curlcaj = new Curl()
             {
-                url = "http://192.168.99.100/esp32-api/public/api/Productos",
+                url = "http://192.168.99.100/esp32-api/public/api/Cajas",
                 verbo = Method.GET,
-                json = producto
+                json = caja.FechaV
             };
 
-            string pruebaprod = apiprod.apiDes(curlprod);
-            Producto[] productos = System.Text.Json.JsonSerializer.Deserialize<Producto[]>(pruebaprod);
+            string cajTemp = apicaj.apiDes(curlcaj);
+            //Caja[] Cajas = System.Text.Json.JsonSerializer.Deserialize<Caja[]>(cajTemp);
 
-            //Pedido
-            Pedido pedido = new Pedido();
-            Api apiped = new Api();
-            Curl curlped = new Curl()
-            {
-                url = "http://192.168.99.100/esp32-api/public/api/Pedidos",
-                verbo = Method.GET,
-                json = pedido
-            };
-            string pedTemp = apiped.apiDes(curlped);
-            Pedido[] pedidos = System.Text.Json.JsonSerializer.Deserialize<Pedido[]>(pedTemp);
+            MessageBox.Show(caja.FechaV);
+/*
+            DataTable dtcaja = new DataTable();
+            dtcaja.Columns.Add("id_Ventas");
+            dtcaja.Columns.Add("Nombre");
+            dtcaja.Columns.Add("FK_idPedidos");
+            dtcaja.Columns.Add("Precio");
+            dtcaja.Columns.Add("Cantidad");
+            dtcaja.Columns.Add("FechaV");
+            dtcaja.Columns.Add("Total");
 
-            //Venta
-            Venta venta = new Venta();
-            Api apiven = new Api();
-            Curl curlven = new Curl()
+            for (int i = 0; i < Cajas.Length; i++)
             {
-                url = "http://192.168.99.100/esp32-api/public/api/Ventas",
-                verbo = Method.GET,
-                json = venta
-            };
-            int index = 0;
-            string venTemp = apiven.apiDes(curlven);
-            Venta[] ventas = System.Text.Json.JsonSerializer.Deserialize<Venta[]>(venTemp);
-            for (int i = 0; i < ventas.Length; i++)
-            {
-                if (ventas[i].FechaV == fecha)
-                {
-                    
-                    int cant = pedidos[ventas[i].FK_idPedidos].Cantidad;
-                    int precio = productos[ventas[i].FK_idProd].Precio;
-                    int total = cant * precio;
-                    listBox1.Items.Insert(index, ventas[i].id_Ventas + " | " + productos[ventas[i].FK_idProd].Nombre + " | " + cant + " | " + total);
-                    index++;
-                    ganancia = ganancia + total;
-                    
-                    
-                }
+                
+                DataRow dataRowVent = dtcaja.NewRow();
+                dataRowVent["id_Ventas"] = Cajas[i].id_Ventas;
+                dataRowVent["Nombre"] = Cajas[i].Nombre;
+                dataRowVent["FK_idPedidos"] = Cajas[i].FK_idPedidos;
+                dataRowVent["Precio"] = Cajas[i].Precio;
+                dataRowVent["Cantidad"] = Cajas[i].Cantidad;
+                dataRowVent["FechaV"] = Cajas[i].FechaV;
+                dataRowVent["Total"] = (Cajas[i].Precio + Cajas[i].Cantidad);
+                dtcaja.Rows.Add(dataRowVent);
             }
 
-            lbl_gan.Text = ganancia.ToString();
+            listBox1.ValueMember = "id_Ventas";
+            listBox1.DisplayMember = "id_Ventas";
+            listBox1.DataSource = dtcaja;
+         */
         }
     }
 }

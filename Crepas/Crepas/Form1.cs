@@ -16,7 +16,7 @@ namespace Crepas
         //EL NOMBRE DEL FORM ES EL PRIMERO QUE SALE EN ESTE CASO "INICIO"
     public partial class Inicio : Form
     {
-        int ventasCont = 1;
+        int ventasCont = 0;
         int pedidosCont = 0;
         int total = 0;
 
@@ -44,9 +44,6 @@ namespace Crepas
                 
                 string pruebaprod = apiprod.apiDes(curlprod);
                 Producto [] productos = System.Text.Json.JsonSerializer.Deserialize<Producto[]>(pruebaprod);
-                //api.apiDes(curl);
-                //MessageBox.Show(productos[2].Nombre+productos[2].Precio);
-                // MessageBox.Show(producto.Nombre);
 
                 DataTable dtprod = new DataTable();
                 dtprod.Columns.Add("idProductos");
@@ -98,41 +95,24 @@ namespace Crepas
                 combo_Cliente.DisplayMember = "Nombre";
                 combo_Cliente.DataSource = dtCli;
 
-                //Pedidos
-                Pedido pedido = new Pedido();
-                Api apiped = new Api();
-                Curl curlped = new Curl()
+                //Ultimop
+
+                Ultimop ultimop = new Ultimop();
+                Api apiU = new Api();
+                Curl curlU = new Curl()
                 {
-                    url = "http://192.168.99.100/esp32-api/public/api/Pedidos",
+                    url = "http://192.168.99.100/esp32-api/public/api/Ultimop",
                     verbo = Method.GET,
-                    json = pedido
+                    json = ultimop
                 };
+                string Utemp = apiU.apiDes(curlU);
+                Ultimop[] ultimops = System.Text.Json.JsonSerializer.Deserialize<Ultimop[]>(Utemp);
+
+                ventasCont = ultimops[0].id_Ventas + 1;
+                pedidosCont = ultimops[0].idPedidos + 1;
 
                 
-                string pedTemp = apiped.apiDes(curlped);
-                Pedido[] pedidos = System.Text.Json.JsonSerializer.Deserialize<Pedido[]>(pedTemp);
-                for(int i = 0; i <= pedidos.Length; i++)
-                {
-                    pedidosCont = i;
-                }
 
-                //Ventas
-
-                Venta venta = new Venta();
-                Api apiven = new Api();
-                Curl curlven = new Curl()
-                {
-                    url = "http://192.168.99.100/esp32-api/public/api/Ventas",
-                    verbo = Method.GET,
-                    json = venta
-                };
-
-                string venTemp = apiven.apiDes(curlven);
-                Venta [] ventas = System.Text.Json.JsonSerializer.Deserialize<Venta[]>(venTemp);
-                for (int i = 0; i == ventas.Length; i++)
-                {
-                    ventasCont = i;
-                }
             }
             catch(Exception ex)
             {
@@ -144,7 +124,9 @@ namespace Crepas
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             ventasCont++;
-            checkedListBox1.Items.Clear();
+            listBox1.Items.Clear();
+            total = 0;
+            lbl_total.Text = total.ToString();
         }
 
         private void txt_cant_KeyPress(object sender, KeyPressEventArgs e)
@@ -196,14 +178,21 @@ namespace Crepas
                 string pruebaprod = apiprod.apiDes(curlprod);
                 Producto[] productos = System.Text.Json.JsonSerializer.Deserialize<Producto[]>(pruebaprod);
 
-                int clb = 0;
-                string orden = productos[FK_idProd - 1].Nombre;
-                int costo = +(productos[FK_idProd - 1].Precio * Cantidad);
-                checkedListBox1.Items.Insert(clb,idPedidos+" | "+(FK_idProd)+" | "+orden+" x "+Cantidad+" = "+costo );
-                clb++;
-                total = total + costo;
+                string Info = null;
+                for (int i = 0; i < productos.Length; i++)
+                {
+                    if (productos[i].idProductos == FK_idProd)
+                    {
+                        int totalped = (productos[i].Precio * Cantidad);
+                        Info = idPedidos+"   |  "+combo_productos.Text+"  |  "+ productos[i].Precio+"  X  "+ Cantidad+"  =  "+ totalped;
+                        total += totalped;
+                    }
+                }
+                
+                listBox1.Items.Add(Info); 
+              
                 lbl_total.Text = total.ToString();
-
+                
                 pedidosCont++;
 
                 //Agregar venta
@@ -272,77 +261,30 @@ namespace Crepas
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            String substring = null;
-            foreach (object itemChecked in checkedListBox1.CheckedItems)
+            try
             {
-                string texto = itemChecked.ToString();
-                int startIndex = 0;
-                int length = 2;
-                substring = texto.Substring(startIndex, length);
-                //MessageBox.Show(substring);
+                
+                    String texto = listBox1.SelectedItem.ToString();
+                    int startIndex = 0;
+                    int length = 5;
+                    String substring = texto.Substring(startIndex, length);
+                    //MessageBox.Show(substring);
+
+                    //Restar total
+
+                    MessageBox.Show(substring);
+               
+                
             }
-            //Restar total
-            Pedido pedidototal = new Pedido();
-            Api apiped = new Api();
-            Curl curlped = new Curl()
+            catch(System.NullReferenceException ex)
             {
-                verbo = Method.GET,
-                json = pedidototal,
-                url = "http://192.168.99.100/esp32-api/public/api/Pedidos"
-            };
-
-            string pruebaped = apiped.apiDes(curlped);
-            Pedido[] pedidos = System.Text.Json.JsonSerializer.Deserialize<Pedido[]>(pruebaped);
-
-            Producto producto = new Producto();
-            Api apiprod = new Api();
-            Curl curlprod = new Curl
-            {
-                url = "http://192.168.99.100/esp32-api/public/api/Productos",
-                verbo = Method.GET,
-                json = producto
-            };
-
-            string pruebaprod = apiprod.apiDes(curlprod);
-            Producto[] productos = System.Text.Json.JsonSerializer.Deserialize<Producto[]>(pruebaprod);
-
-            for(int i = 0; i < pedidos.Length; i++)
-            {
-                int s1, s2;
-                if(pedidos[i].idPedidos == Convert.ToInt32(substring))
-                {
-                    s1 = productos[pedidos[i].FK_idProd - 1].Precio;
-                    s2 = pedidos[i].Cantidad;
-
-                    total -= (s1 * s2);
-                    lbl_total.Text = total.ToString();
-                }
+                MessageBox.Show("Selecciona el elemento");
             }
-
-            Venta venta = new Venta();
-            Api apiven = new Api();
-            Curl curlvent = new Curl();
-
-            venta.FK_idPedidos = Convert.ToInt32(substring);
-
-            curlvent.verbo = Method.DELETE;
-            curlvent.json = venta;
-            curlvent.url = "http://192.168.99.100/esp32-api/public/api/Ventas";
-            apiven.apicall(curlvent);
-
-            Pedido pedido = new Pedido();
-            Api api = new Api();
-            Curl curl = new Curl();
-
-            pedido.idPedidos = Convert.ToInt32(substring);
-
-
-            curl.verbo = Method.DELETE;
-            curl.json = pedido;
-            api.apicall(curl);
-
-            checkedListBox1.Items.RemoveAt(checkedListBox1.SelectedIndex);
-
+            catch(Exception ex)
+            {
+                MessageBox.Show("Problema: "+ ex);
+            }
+            
         }
     }  
 }
